@@ -1,0 +1,36 @@
+{
+  "name": "valleymusicclub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "swagger": "node ./swagger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blissfulsaint/valleymusicclub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blissfulsaint/valleymusicclub/issues"
+  },
+  "homepage": "https://github.com/blissfulsaint/valleymusicclub#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-openid-connect": "^2.16.0",
+    "express-validator": "^7.0.1",
+    "joi": "^17.9.2",
+    "mongoose": "^7.2.0",
+    "swagger-autogen": "^2.23.1",
+    "swagger-ui-express": "^4.6.3",
+    "validatorjs": "^3.22.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

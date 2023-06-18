@@ -1,0 +1,35 @@
+[
+    {
+        "firstName": "Brandon",
+        "middleName": "Kelly",
+        "lastName": "Lisonbee",
+        "username": "brandonkelly99",
+        "password": "password1",
+        "email": "blisonbee213596@gmail.com",
+        "phone": "(214) 596-8665",
+        "juniorParticipants": 12,
+        "adultParticipants": 7
+    },
+    {
+        "firstName": "Tiffani",
+        "middleName": "",
+        "lastName": "Smith",
+        "username": "tifsmith",
+        "password": "password2",
+        "email": "tiffanismith@gmail.com",
+        "phone": "(214) 596-3445",
+        "juniorParticipants": 5,
+        "adultParticipants": 2
+    },
+    {
+        "firstName": "Stephanie",
+        "middleName": "Kay",
+        "lastName": "Cochran",
+        "username": "stephcochran",
+        "password": "password3",
+        "email": "stephcochran31@yahoo.com",
+        "phone": "(214) 789-7801",
+        "juniorParticipants": 30,
+        "adultParticipants": 2
+    }
+]
