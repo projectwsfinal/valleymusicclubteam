@@ -5,7 +5,7 @@
     "description": "Valley Music Club API",
     "version": "1.0.0"
   },
-  "host": "valleymusicclub.onrender.com",
+  "host": "valleymusicclub-team.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
