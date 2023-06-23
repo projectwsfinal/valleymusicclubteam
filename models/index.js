@@ -106,11 +106,18 @@ const eventSchema = new Schema({
     },
 })
 
-
+const instrumentSchema = new Schema({
+    instrument: {
+        type: String,
+        required: [true, 'Instrument name required']
+    },
+})
 
 const User = mongoose.model('users', userSchema);
 const Student = mongoose.model('students', studentSchema);
 const Event = mongoose.model('events', eventSchema);
+const Instrument = mongoose.model('instruments', instrumentSchema);
+
 
 mongoose.Promise = global.Promise;
 
@@ -121,5 +128,7 @@ db.url = dbConfig.url;
 db.users = User;
 db.students = Student;
 db.events = Event;
+db.instruments = Instrument;
+
 
 module.exports = db;
