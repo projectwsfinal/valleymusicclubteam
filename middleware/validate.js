@@ -2,6 +2,7 @@ const db = require('../models');
 const mongoose = require('mongoose');
 const User = db.users;
 const Student = db.students;
+const Event = db.events;
 
 exports.validateUser = (req, res, next) => {
     const user = new User({
@@ -35,6 +36,26 @@ exports.validateStudent = (req, res, next) => {
     });
 
     let error = student.validateSync();
+
+    if (error) {
+        res.status(412).send({message: error.message});
+    } else {
+        next();
+    }
+}
+
+exports.validateEvent = (req, res, next) => {
+    const event = new Event({
+        performance_type_ID: req.body.performance_type_ID,
+        class_level_ID: req.body.class_level_ID,
+        term_ID: req.body.term_ID,
+        event_date: req.body.event_date,
+        event_start_time: req.body.event_start_time,
+        event_end_time: req.body.event_end_time,
+        student_ID: req.body.student_ID    
+    });
+
+    let error = event.validateSync();
 
     if (error) {
         res.status(412).send({message: error.message});
