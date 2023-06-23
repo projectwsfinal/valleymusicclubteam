@@ -1,6 +1,6 @@
 const db = require('../models');
 const mongoose = require('mongoose');
-const Instrument = db.instrument;
+const Instrument = db.instruments;
 
 exports.createInstrument = (req, res) => {
     if (!req.body.instrument_name) {
