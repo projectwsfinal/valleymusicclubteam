@@ -2,11 +2,13 @@ const routes = require('express').Router();
 const user = require('./user');
 const student = require('./student');
 const event = require('./event');
+const instrument = require('./instrument');
 const auth = require('./auth');
 
 routes.use('/users', user);
 routes.use('/students', student);
 routes.use('/events', event);
+routes.use('/instrument', instrument);
 routes.use('/auth', auth);
 routes.use('/', require('./swagger'));
 // routes.use(
