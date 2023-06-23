@@ -107,7 +107,7 @@ const eventSchema = new Schema({
 })
 
 const instrumentSchema = new Schema({
-    instrument: {
+    instrument_name: {
         type: String,
         required: [true, 'Instrument name required']
     },

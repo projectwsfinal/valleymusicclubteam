@@ -63,3 +63,17 @@ exports.validateEvent = (req, res, next) => {
         next();
     }
 }
+
+exports.validateInstrument = (req, res, next) => {
+    const instrument = new Instrument({
+        instrument: req.body.instrument_name,
+    });
+
+    let error = instrument.validateSync();
+
+    if (error) {
+        res.status(412).send({message: error.message});
+    } else {
+        next();
+    }
+}

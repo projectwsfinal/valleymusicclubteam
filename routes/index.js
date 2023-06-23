@@ -8,7 +8,7 @@ const auth = require('./auth');
 routes.use('/users', user);
 routes.use('/students', student);
 routes.use('/events', event);
-routes.use('/instrument', instrument);
+routes.use('/instruments', instrument);
 routes.use('/auth', auth);
 routes.use('/', require('./swagger'));
 // routes.use(
