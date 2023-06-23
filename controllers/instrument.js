@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Instrument = db.instrument;
 
 exports.createInstrument = (req, res) => {
-    if (!req.body.instrument) {
+    if (!req.body.instrument_name) {
         res.status(400).send({ message: 'Content cannot be empty!' });
         return;
     }
@@ -11,7 +11,7 @@ exports.createInstrument = (req, res) => {
     // Create a Instrument
     const instrument = new Instrument();
 
-    instrument.instrument = req.body.instrument,
+    instrument.instrument_name = req.body.instrument_name,
 
     instrument.validateSync();
 
@@ -33,7 +33,7 @@ exports.getAllInstruments = (req, res) => {
     instrument.find(
         {},
         {
-            instrument: 1,
+            instrument_name: 1,
             _id: 0
         }
     )
