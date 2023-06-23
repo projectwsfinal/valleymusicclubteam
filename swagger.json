@@ -403,6 +403,202 @@
         }
       }
     },
+    "/events/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "event",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "performance_type_ID": {
+                  "type": "string",
+                  "example": ""
+                },
+                "class_level_ID": {
+                  "type": "string",
+                  "example": ""
+                },
+                "term_ID": {
+                  "type": "string",
+                  "example": ""
+                },
+                "event_date": {
+                  "type": "string",
+                  "example": ""
+                },
+                "event_start_time": {
+                  "type": "string",
+                  "example": ""
+                },
+                "event_end_time": {
+                  "type": "string",
+                  "example": ""
+                },
+                "student_ID": {
+                  "type": "string",
+                  "example": ""
+                }
+              },
+              "required": [
+                "performance_type_ID",
+                "class_level_ID",
+                "term_ID",
+                "event_date",
+                "event_start_time",
+                "event_end_time",
+                "student_ID"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/events/{_id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "event",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "performance_type_ID": {
+                  "type": "string",
+                  "example": ""
+                },
+                "class_level_ID": {
+                  "type": "string",
+                  "example": ""
+                },
+                "term_ID": {
+                  "type": "string",
+                  "example": ""
+                },
+                "event_date": {
+                  "type": "string",
+                  "example": ""
+                },
+                "event_start_time": {
+                  "type": "string",
+                  "example": ""
+                },
+                "event_end_time": {
+                  "type": "string",
+                  "example": ""
+                },
+                "student_ID": {
+                  "type": "string",
+                  "example": ""
+                }
+              },
+              "required": [
+                "performance_type_ID",
+                "class_level_ID",
+                "term_ID",
+                "event_date",
+                "event_start_time",
+                "event_end_time",
+                "student_ID"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/auth/": {
       "get": {
         "description": "",
