@@ -599,7 +599,7 @@
         }
       }
     },
-    "/instrument/": {
+    "/instruments/": {
       "get": {
         "description": "",
         "parameters": [],
@@ -621,28 +621,7 @@
             "schema": {
               "type": "object",
               "properties": {
-                "performance_type_ID": {
-                  "example": "any"
-                },
-                "class_level_ID": {
-                  "example": "any"
-                },
-                "term_ID": {
-                  "example": "any"
-                },
-                "event_date": {
-                  "example": "any"
-                },
-                "event_start_time": {
-                  "example": "any"
-                },
-                "event_end_time": {
-                  "example": "any"
-                },
-                "student_ID": {
-                  "example": "any"
-                },
-                "instrument": {
+                "instrument_name": {
                   "example": "any"
                 }
               }
@@ -665,7 +644,7 @@
         }
       }
     },
-    "/instrument/{_id}": {
+    "/instruments/{_id}": {
       "get": {
         "description": "",
         "parameters": [
@@ -703,25 +682,7 @@
             "schema": {
               "type": "object",
               "properties": {
-                "performance_type_ID": {
-                  "example": "any"
-                },
-                "class_level_ID": {
-                  "example": "any"
-                },
-                "term_ID": {
-                  "example": "any"
-                },
-                "event_date": {
-                  "example": "any"
-                },
-                "event_start_time": {
-                  "example": "any"
-                },
-                "event_end_time": {
-                  "example": "any"
-                },
-                "student_ID": {
+                "instrument_name": {
                   "example": "any"
                 }
               }
