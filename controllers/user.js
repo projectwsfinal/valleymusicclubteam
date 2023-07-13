@@ -38,18 +38,15 @@ exports.createUser = (req, res) => {
     user.juniorParticipants = req.body.juniorParticipants,
     user.adultParticipants = req.body.adultParticipants,
 
-    user.validateSync();
-
     // Save User in the database
     user
         .save(user)
         .then((data) => {
-            res.status(201).send(data);
+            res.status(201).json(data);
         })
         .catch((err) => {
-            res.status(500).send({
-                message:
-                    err.message || 'Some error occurred while creating the User.',
+            res.status(500).json({
+                message: 'Some error occurred while creating the User.',
             });
         });
 };

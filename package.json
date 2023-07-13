@@ -27,6 +27,7 @@
     "joi": "^17.9.2",
     "mongoose": "^7.2.0",
     "node": "^20.2.0",
+    "supertest": "^6.3.3",
     "swagger-autogen": "^2.23.1",
     "swagger-ui-express": "^4.6.3",
     "validatorjs": "^3.22.1"
