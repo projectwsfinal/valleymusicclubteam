@@ -20,15 +20,6 @@ describe('Controller', () => {
         expect(mRes.status).toHaveBeenCalledWith(400);
         expect(mRes.send).toHaveBeenCalled();
     });
-
-    // test("Test creating event with required info", () => {
-    //     const mReq = {body: {firstName: 'John'}}
-    //     event.createEvent(mReq, mRes, mNext);
-    //     // expect(mRes.status).toBeCalledWith(400);
-    //     // expect(mRes.status().json).toBeCalledWith({message: 'Content cannot be empty!'});
-    //     expect(mRes.status).toHaveBeenCalledWith(500);
-    //     expect(mRes.send).toHaveBeenCalled({error: {message}});
-    // });
 })
 
 
