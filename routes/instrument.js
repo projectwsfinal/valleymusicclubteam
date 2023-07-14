@@ -13,8 +13,8 @@ const validation = require('../middleware/validate');
 routes.get('/', requiresAuth(), instruments.getAllInstruments);
 routes.get('/:_id', requiresAuth(), instruments.getInstrument);
 
-routes.post('/', validation.validateInstrument, instruments.createInstrument);
-routes.put('/:_id', validation.validateInstrument, instruments.updateInstrument);
+routes.post('/', instruments.createInstrument);
+routes.put('/:_id', instruments.updateInstrument);
 
 routes.delete('/:_id', instruments.deleteInstrument);
 
