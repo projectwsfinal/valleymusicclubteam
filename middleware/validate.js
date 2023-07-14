@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const User = db.users;
 const Student = db.students;
 const Event = db.events;
+const Instrument = db.instruments;
 
 exports.validateUser = (req, res, next) => {
     const user = new User({
