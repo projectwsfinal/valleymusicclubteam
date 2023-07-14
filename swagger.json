@@ -635,9 +635,6 @@
           "400": {
             "description": "Bad Request"
           },
-          "412": {
-            "description": "Precondition Failed"
-          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -677,15 +674,19 @@
             "type": "string"
           },
           {
-            "name": "body",
+            "name": "instrument",
             "in": "body",
             "schema": {
               "type": "object",
               "properties": {
                 "instrument_name": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 }
-              }
+              },
+              "required": [
+                "instrument_name"
+              ]
             }
           }
         ],
@@ -698,9 +699,6 @@
           },
           "404": {
             "description": "Not Found"
-          },
-          "412": {
-            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"

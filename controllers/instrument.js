@@ -81,7 +81,7 @@ exports.updateInstrument = (req, res) => {
 
   const _id = req.params._id;
 
-  instrument.findByIdAndUpdate(_id, req.body, { useFindAndModify: false })
+  Instrument.findByIdAndUpdate(_id, req.body, { useFindAndModify: false })
       .then((data) => {
           if (!data) {
               res.status(404).send({
