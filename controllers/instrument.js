@@ -67,6 +67,12 @@ exports.getInstrument = (req, res) => {
 }
 
 exports.updateInstrument = (req, res) => {
+    /* #swagger.parameters['instrument'] = {
+    in: 'body',
+    schema: {
+      $instrument_name: ''
+    }
+  } */
   if (!req.body) {
       return res.status(400).send({
           message: 'Data to update cannot be empty!',
