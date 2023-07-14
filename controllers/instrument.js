@@ -30,7 +30,7 @@ exports.createInstrument = (req, res) => {
 };
 
 exports.getAllInstruments = (req, res) => {
-    instrument.find(
+    Instrument.find(
         {},
         {
             instrument_name: 1,
@@ -51,7 +51,7 @@ exports.getAllInstruments = (req, res) => {
 exports.getInstrument = (req, res) => {
     const _id = req.params._id;
 
-    instrument.find({ _id: _id })
+    Instrument.find({ _id: _id })
         .then((data) => {
             if (!data)
                 res
@@ -99,7 +99,7 @@ exports.updateInstrument = (req, res) => {
 exports.deleteInstrument = (req, res) => {
   const _id = req.params._id;
 
-  instrument.findByIdAndRemove(_id)
+  Instrument.findByIdAndRemove(_id)
     .then((data) => {
       res.status(204).send({ message: 'Removed instrument: ', data });
     })
